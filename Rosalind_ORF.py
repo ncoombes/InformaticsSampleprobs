@@ -47,6 +47,11 @@ def Transcribed (possprot):
             if j > i:
                 startstops.append([i,j])
                 break
-    return(startstops)
+    output=[]
+    for i in range(0,len(startstops)):
+        output.append(possprot[startstops[i][0]:startstops[i][1]])
+    return(output)
+            
+    
 
             
